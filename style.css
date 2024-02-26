@@ -4,4 +4,14 @@ body {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 300;
   font-style: normal;
-}7
+}
+.button {
+  border: none;
+  color: #C0A0C0;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
