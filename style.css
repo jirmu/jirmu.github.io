@@ -6,7 +6,7 @@ body {
   font-style: normal;
 }
 .buttee {
-  border: none;
+  border: 2px solid #F0E0F0;
   color: #C0A0C0;
   padding: 20px 20px;
   text-align: center;
