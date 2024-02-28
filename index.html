@@ -11,6 +11,13 @@ iframe {border: 3px solid #408070; border-radius: 20px;}
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+   function buttonclick(){
+     $(".buttee").css({
+       "color":"red"
+     })
+   } 
+  </script>
   <body>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +34,9 @@ iframe {border: 3px solid #408070; border-radius: 20px;}
     <h3>Welcome to my dream library!</h3>
     <p>This is a project of mine to document my dreams for, idk, shits and giggles probably.</p>
   <p>end goal is having a lucid dream but i will probably not stop documenting even if I get there!</p>
-  <div style="margin: auto; transform: scale(1.5);">
+  <div onclick="buttonclick()" style="margin: auto; transform: scale(1.5);">
 <a href="list.html" <button onclick="href='list.html';" class="buttee"; type="button";> :3 </button> </a>
   </div>
+    
 </body>
 </html>
