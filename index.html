@@ -27,16 +27,18 @@
 		}
   .button {
   background-color: black;  
-  border: 2px solid white;
+  border: none;
   color: white;
   padding: 50px 110px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 5em;
+  font-size: 6em;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 25px;
+  font-family: IBM Plex Mono;
+  width: 90%;
 }
 .p {
   width: 30px;
@@ -52,7 +54,7 @@
 
 		  font-family: IBM Plex Mono;
 
-			font-size: 20em;
+			font-size: 12em;
 
 			font-weight: normal;
 
@@ -96,9 +98,14 @@ font-size: 5em;
 font-size: 5em;
 }  
   textarea {
-  width: 540px;
+  width: 90%;
   height: 270px;
   font-size: 5em;
+  font-family: IBM Plex Mono;
+  color: white;
+  background-color: black;
+  border: 8px solid white;
+  border-radius: 50px;
 }
 	</style>
 
@@ -137,7 +144,7 @@ function secondsightify(t) {
 </head>
 
 <body>
-<h2>THE EYE</h2>
+<h2>Makinae</h2>
 
 <p><textarea id="input" cols="80" rows="12" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
 <p font-size="10em" id="conversion"></p>
