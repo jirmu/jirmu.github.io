@@ -33,8 +33,8 @@
 	</style>
 	<script type="text/javascript">
 		function secondsightify(t) {
-			if([...t].some(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f))) { document.querySelector('#conversion').innerText="3y3 text detected. Revealing...";return (t=>([...t].map(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f)?String.fromCodePoint(x.codePointAt(0)-0xe0000):x).join``))(t) } 
-			else { document.querySelector('#conversion').innerHTML="No 3y3 text detected. Concealing...<br/><small>It'll appear empty. Press Ctrl-A and copy to get your hidden text.</small>";return (t=>[...t].map(x=>(0x00<x.codePointAt(0)&&x.codePointAt(0)<0x7f)?`${String.fromCodePoint(x.codePointAt(0)+0xe0000)}`:x).join``)(t) }
+			if([...t].some(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f))) { document.querySelector('#conversion').innerText="OBSERVED:";return (t=>([...t].map(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f)?String.fromCodePoint(x.codePointAt(0)-0xe0000):x).join``))(t) } 
+			else { document.querySelector('#conversion').innerHTML="HIDING:"<br/><small></small>";return (t=>[...t].map(x=>(0x00<x.codePointAt(0)&&x.codePointAt(0)<0x7f)?`${String.fromCodePoint(x.codePointAt(0)+0xe0000)}`:x).join``)(t) }
 		}
 		function update() {
 			document.getElementById('output').value = secondsightify(document.getElementById('input').value);
@@ -45,14 +45,5 @@
 
 <h1>EYE</h1>
 <p><textarea id="input" cols="80" rows="12" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
-
-<p class="arrow">↓</p>
-<p id="conversion">[nothing]</p>
-
 <p><textarea id="output" cols="80" rows="12" readonly="readonly"></textarea></p>
-
-<details>
-<div class=code>
-javascript:document.querySelectorAll('article div[lang]').forEach(x=>x[i='innerHTML']=[...x[i]].map(x=>(0xe0000<x[c='codePointAt'](0)&&x[c](0)<0xe007f)?`<span style="color:black;-webkit-text-stroke: 1px slateblue;">${String.fromCodePoint(x[c](0)-0xe0000)}</span>`:x).join``) 
-</details>
 </body></html>
