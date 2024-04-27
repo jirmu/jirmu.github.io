@@ -25,10 +25,25 @@
 			color: white;
 
 		}
-
+  .button {
+  background-color: black;  
+  border: 2px solid white;
+  color: white;
+  padding: 50px 110px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 5em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.p {
+  width: 30px;
+}
 		h1 {
 
-			margin-bottom: 0.1em;
+			margin-bottom: 5em;
 		font-family: IBM Plex Mono;
 
 		}
@@ -37,11 +52,11 @@
 
 		  font-family: IBM Plex Mono;
 
-			font-size: 6em;
+			font-size: 20em;
 
 			font-weight: normal;
 
-			margin: 0 auto 5em auto;
+			margin: 0 auto 0.1em auto;
 
 		}
 
@@ -57,7 +72,7 @@
 
 		.warning {
 
-			background-color: orange;
+			background-color: black;
 
 			padding: 0.4em 0.75em;
 
@@ -70,7 +85,21 @@
  .textarea {
   rows="8";
   cols="40";
- }   
+ }
+ innerHTML {
+ width: 80px;
+font-size: 5em;
+}  
+ }
+ innerText {
+ width: 80px;
+font-size: 5em;
+}  
+  textarea {
+  width: 540px;
+  height: 270px;
+  font-size: 5em;
+}
 	</style>
 
 	<script type="text/javascript">
@@ -91,9 +120,9 @@
 }
 function secondsightify(t) {
 
-			if([...t].some(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f))) { document.querySelector('#conversion').innerText="OBSERVING";return (t=>([...t].map(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f)?String.fromCodePoint(x.codePointAt(0)-0xe0000):x).join``))(t) } 
+			if([...t].some(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f))) { document.querySelector('#conversion').innerText="";return (t=>([...t].map(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f)?String.fromCodePoint(x.codePointAt(0)-0xe0000):x).join``))(t) } 
 
-			else { document.querySelector('#conversion').innerHTML="HIDING<br/><small></small>";return (t=>[...t].map(x=>(0x00<x.codePointAt(0)&&x.codePointAt(0)<0x7f)?`${String.fromCodePoint(x.codePointAt(0)+0xe0000)}`:x).join``)(t) }
+			else { document.querySelector('#conversion').innerHTML="";return (t=>[...t].map(x=>(0x00<x.codePointAt(0)&&x.codePointAt(0)<0x7f)?`${String.fromCodePoint(x.codePointAt(0)+0xe0000)}`:x).join``)(t) }
 
 		}
 
@@ -111,8 +140,9 @@ function secondsightify(t) {
 <h2>THE EYE</h2>
 
 <p><textarea id="input" cols="80" rows="12" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
-<p id="conversion">WAITING</p>
+<p font-size="10em" id="conversion"></p>
 <p><textarea id="output" cols="80" rows="12" readonly="readonly"></textarea></p>
-<button onclick="myFunction()">Copy text</button>
+<button class="button" margin="270px" onclick="myFunction()">Copy text</button>
 </body></html>
 
+󠁂󠁅󠁎󠁄󠁅󠀠󠁋󠁏󠁃󠁁󠁍󠁁󠁎󠀠󠁙󠁁󠁒󠁒󠁁󠁋󠀠󠁐󠁏󠁒󠁔󠁕󠁇󠁅󠁓󠁅󠀠󠁓󠁕󠁐󠁅󠁒󠁉󠁏󠁒󠁔󠁁
