@@ -29,24 +29,4 @@
 		.code { max-width: 500px; display:inline-block; word-break: break-all; overflow-wrap: anywhere; font-family: monospace; }
 		a { color: lightblue; }
 	</style>
-	<script type="text/javascript">
-		function secondsightify(t) {
-			if([...t].some(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f))) { document.querySelector('#conversion').innerText="3y3 text detected. Revealing...";return (t=>([...t].map(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f)?String.fromCodePoint(x.codePointAt(0)-0xe0000):x).join``))(t) } 
-			else { document.querySelector('#conversion').innerHTML="No 3y3 text detected. Concealing...<br/><small>It'll appear empty. Press Ctrl-A and copy to get your hidden text.</small>";return (t=>[...t].map(x=>(0x00<x.codePointAt(0)&&x.codePointAt(0)<0x7f)?`${String.fromCodePoint(x.codePointAt(0)+0xe0000)}`:x).join``)(t) }
-		}
-		function update() {
-			document.getElementById('output').value = secondsightify(document.getElementById('input').value);
-		}
-	</script>
-</head>
-<body>
-
-<h1>EYE</h1>
-<p><textarea id="input" cols="80" rows="12" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
-<p class="arrow">↓</p>
-<p id="conversion">[nothing]</p>
-<p><textarea id="output" cols="80" rows="12" readonly="readonly"></textarea></p>
-<div class=code>
-javascript&#x3a;document&#x2e;querySelectorAll&#x28;&#x27;article div&#x5b;lang&#x5d;&#x27;&#x29;&#x2e;forEach&#x28;x&#x3d;&#x3e;x&#x5b;i&#x3d;&#x27;innerHTML&#x27;&#x5d;&#x3d;&#x5b;&#x2e;&#x2e;&#x2e;x&#x5b;i&#x5d;&#x5d;&#x2e;map&#x28;x&#x3d;&#x3e;&#x28;0xe0000&#x3c;x&#x5b;c&#x3d;&#x27;codePointAt&#x27;&#x5d;&#x28;0&#x29;&#x26;&#x26;x&#x5b;c&#x5d;&#x28;0&#x29;&#x3c;0xe007f&#x29;&#x3f;&#x60;&#x3c;span style&#x3d;&#x22;color&#x3a;black&#x3b;-webkit-text-stroke&#x3a; 1px slateblue&#x3b;&#x22;&#x3e;&#x24;&#x7b;String&#x2e;fromCodePoint&#x28;x&#x5b;c&#x5d;&#x28;0&#x29;-0xe0000&#x29;&#x7d;&#x3c;&#x2f;span&#x3e;&#x60;&#x3a;x&#x29;&#x2e;join&#x60;&#x60;&#x29; 
-</details>
-</body></html>
+	<script type="text/javascript"> function secondsightify(t) { if([...t].some(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f))) { document.querySelector('#conversion').innerText="3y3 text detected. Revealing...";return (t=>([...t].map(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f)?String.fromCodePoint(x.codePointAt(0)-0xe0000):x).join``))(t) } else { document.querySelector('#conversion').innerHTML="No 3y3 text detected. Concealing...<br/><small>It'll appear empty. Press Ctrl-A and copy to get your hidden text.</small>";return (t=>[...t].map(x=>(0x00<x.codePointAt(0)&&x.codePointAt(0)<0x7f)?`${String.fromCodePoint(x.codePointAt(0)+0xe0000)}`:x).join``)(t) } } function update() { document.getElementById('output').value = secondsightify(document.getElementById('input').value); } </script>
