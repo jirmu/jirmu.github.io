@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <head> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+  </head>
+	<title>EYE</title>
+
+
+        
+
+	<style type="text/css">
+
+		body {
+
+			background-color: #000;
+
+			font-family: IBM Plex Mono;
+
+			text-align: center;
+
+			color: white;
+
+		}
+
+		h1 {
+
+			margin-bottom: 0.1em;
+		font-family: IBM Plex Mono;
+
+		}
+
+		h2 {
+
+		  font-family: IBM Plex Mono;
+
+			font-size: 6em;
+
+			font-weight: normal;
+
+			margin: 0 auto 5em auto;
+
+		}
+
+		.arrow {
+
+			font-size: 2.0em;
+
+			font-weight: bold;
+
+			margin: 0;
+
+		}
+
+		.warning {
+
+			background-color: orange;
+
+			padding: 0.4em 0.75em;
+
+		}
+
+		.code { max-width: 500px; display:inline-block; word-break: break-all; overflow-wrap: anywhere; font-family: monospace; }
+
+		a { color: lightblue; }
+
+ .textarea {
+  rows="8";
+  cols="40";
+ }   
+	</style>
+
+	<script type="text/javascript">
+
+	function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("output");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("UNDERSTOOD");
+}
+function secondsightify(t) {
+
+			if([...t].some(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f))) { document.querySelector('#conversion').innerText="OBSERVING";return (t=>([...t].map(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f)?String.fromCodePoint(x.codePointAt(0)-0xe0000):x).join``))(t) } 
+
+			else { document.querySelector('#conversion').innerHTML="HIDING<br/><small></small>";return (t=>[...t].map(x=>(0x00<x.codePointAt(0)&&x.codePointAt(0)<0x7f)?`${String.fromCodePoint(x.codePointAt(0)+0xe0000)}`:x).join``)(t) }
+
+		}
+
+		function update() {
+
+			document.getElementById('output').value = secondsightify(document.getElementById('input').value);
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+<h2>THE EYE</h2>
+
+<p><textarea id="input" cols="80" rows="12" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
+<p id="conversion">WAITING</p>
+<p><textarea id="output" cols="80" rows="12" readonly="readonly"></textarea></p>
+<button onclick="myFunction()">Copy text</button>
+</body></html>
+
