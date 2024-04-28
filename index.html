@@ -123,6 +123,15 @@ font-size: 5em;
 
   // Alert the copied text //
 }
+		function fully() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+		}
 function secondsightify(t) {
 
 			if([...t].some(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f))) { document.querySelector('#conversion').innerText="";return (t=>([...t].map(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f)?String.fromCodePoint(x.codePointAt(0)-0xe0000):x).join``))(t) } 
@@ -142,6 +151,7 @@ function secondsightify(t) {
 </head>
 
 <body>
+	onload="fully"
 <h2>Makinae</h2>
 
 <p><textarea id="input" cols="80" rows="12" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
