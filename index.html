@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
   </head>
-	<title>Makinae</title>
+	<title>OM</title>
 
 
         
@@ -75,11 +75,6 @@
 		font-family: IBM Plex Mono;
  font-size: 150px;
  font-weight: normal;
-		}
-
- .textarea {
-  rows="8";
-  cols="40";
  }
  innerHTML {
  width: 20%;
@@ -108,28 +103,13 @@ font-size: 5em;
 
 	<script type="text/javascript">
 
-	function myFunction() {
-  // Get the text field
+	function copifier() {
+  
   var copyText = document.getElementById("output");
-
-  // Select the text field
   copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-   // Copy the text inside the text field
+  copyText.setSelectionRange(0, 99999); 
   navigator.clipboard.writeText(copyText.value);
-
-  // Alert the copied text //
 }
-		function fully() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-   elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-		}
 function secondsightify(t) {
 
 			if([...t].some(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f))) { document.querySelector('#conversion').innerText="";return (t=>([...t].map(x=>(0xe0000<x.codePointAt(0)&&x.codePointAt(0)<0xe007f)?String.fromCodePoint(x.codePointAt(0)-0xe0000):x).join``))(t) } 
@@ -143,26 +123,31 @@ function secondsightify(t) {
 			document.getElementById('output').value = secondsightify(document.getElementById('input').value);
 
 		}
-		function toggleFullscreen() {
-  document.documentElement.requestFullscreen();
-		}
+
+function compareScreenSize() {
+ const windowWidth = document.body.clientWidth;
+ const windowHeight = document.body.clientHeight;
+ 
+ if (windowWidth >= windowHeight) {
+   return 1; // Width is greater than height
+ } else if (windowWidth < windowHeight) {
+   return 2; // Width is less than height
+ } else {
+   return 3; // Width and height are equal
+ }
+}
 
 	</script>
 
 </head>
 
-<body onload="fully">
-
-<div style="display:grid">
+<body>
 	
 <h2>Oculae Machinum</h2>
-
-</div>
-	
 <p><textarea id="input" cols="20" rows="3" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
-<p font-size="10em" id="conversion"></p>
-<p><textarea onclick="myFunction()" id="output" cols="20" rows="3" readonly="readonly"></textarea></p>
-</body>
+<p id="conversion"></p>
+<p onclick="copifier()"><textarea id="output" cols="20" rows="3" readonly="readonly"></textarea></p>
+  </body>
 </html>
 
 󠁂󠁅󠁎󠁄󠁅󠀠󠁋󠁏󠁃󠁁󠁍󠁁󠁎󠀠󠁙󠁁󠁒󠁒󠁁󠁋󠀠󠁐󠁏󠁒󠁔󠁕󠁇󠁅󠁓󠁅󠀠󠁓󠁕󠁐󠁅󠁒󠁉󠁏󠁒󠁔󠁁
