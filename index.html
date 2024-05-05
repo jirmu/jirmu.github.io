@@ -39,6 +39,30 @@
 
 			color: white;
 		}
+
+   #container {
+   width:100%;
+    overflow: hidden;
+}
+#one {
+   width:50%;
+   float:left;
+}
+#two {
+   width:50%;
+   float:right;
+}
+@media only screen and (max-width: 767px)
+{
+    #one, #two
+    {
+        display: block; 
+        float: none; 
+        width: 100%;
+        padding: 20px 0;
+    }
+} 
+		
   .material-symbols-outlined {
   font-variation-settings:
   'FILL' 100,
@@ -144,10 +168,12 @@ function compareScreenSize() {
 <body>
 	
 <h2>Oculae Machinum</h2>
-<p><textarea id="input" cols="20" rows="3" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
+<div id="container">
+<p id="one"><textarea id="input" cols="20" rows="3" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
 <p id="conversion"></p>
-<p onclick="copifier()"><textarea id="output" cols="20" rows="3" readonly="readonly"></textarea></p>
-  </body>
+<p onclick="copifier()" id="two"><textarea id="output" cols="20" rows="3" readonly="readonly"></textarea></p>
+</div>
+</body>
 </html>
 
 󠁂󠁅󠁎󠁄󠁅󠀠󠁋󠁏󠁃󠁁󠁍󠁁󠁎󠀠󠁙󠁁󠁒󠁒󠁁󠁋󠀠󠁐󠁏󠁒󠁔󠁕󠁇󠁅󠁓󠁅󠀠󠁓󠁕󠁐󠁅󠁒󠁉󠁏󠁒󠁔󠁁
