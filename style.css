@@ -48,7 +48,7 @@
     background-color: rgba(0,0,0,0.8);
     background-blend-mode: darken;
   }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1080px) {
     #one, #two
     {
         display: block; 
