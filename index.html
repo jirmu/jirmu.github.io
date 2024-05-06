@@ -42,33 +42,71 @@
 
    #container {
    width:100%;
-    overflow: hidden;
+   display: grid;
+  grid-template-columns: auto auto;
+  grid-row: 1;
+
 }
 #one {
-   width:30%;
-   float:left;
+  float:left;
+  width: 350px;
+  height: 1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 5em;
+  font-family: IBM Plex Mono;
+  color: white;
+  background-color: black;
+  border: 8px solid white;
+  border-radius: 50px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB0tppV--rxXxlv2GsnFw9mTxCGeKurtmoLUYUMt6QkEzDoKWeXrJl0zR&s=10');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: darken;
 }
 #two {
-   width:30%;
-   float:right;
+  float:right;
+  width: 350px;
+  height: 1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 5em;
+  font-family: IBM Plex Mono;
+  color: white;
+  background-color: black;
+  border: 8px solid white;
+  border-radius: 50px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB0tppV--rxXxlv2GsnFw9mTxCGeKurtmoLUYUMt6QkEzDoKWeXrJl0zR&s=10');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: darken;
 }
-@media only screen and (max-width: 767px)
+@media only screen and (max-width: 1080px)
 {
     #one, #two
     {
         display: block; 
         float: none; 
-        width: 100%;
-        padding: 20px 0;
+        width: 700px;
+  height: 1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 5em;
+  font-family: IBM Plex Mono;
+  color: white;
+  background-color: black;
+  border: 8px solid white;
+  border-radius: 50px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB0tppV--rxXxlv2GsnFw9mTxCGeKurtmoLUYUMt6QkEzDoKWeXrJl0zR&s=10');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: darken;
     }
-} 
-		
-  .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 100,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24,
+  #container {
+   width:100%;
+   display: grid;
+   grid-template-columns: auto;
+  grid-row: 2;
+
+  }
+
 }
   .button {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB0tppV--rxXxlv2GsnFw9mTxCGeKurtmoLUYUMt6QkEzDoKWeXrJl0zR&s=10');
@@ -169,9 +207,11 @@ function compareScreenSize() {
 	
 <h2>Oculae Machinum</h2>
 <div id="container">
-<p id="one"><textarea id="input" cols="20" rows="3" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
+<p><textarea id="input" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
+<div>
 <p id="conversion"></p>
-<p onclick="copifier()" id="two"><textarea id="output" cols="20" rows="3" readonly="readonly"></textarea></p>
+<p onclick="copifier()"><textarea id="output" readonly="readonly"></textarea></p>
+</div>
 </div>
 </body>
 </html>
