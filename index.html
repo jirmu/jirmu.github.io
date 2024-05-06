@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"; name="viewport"; width=device-width, initial-scale=1, maximum-scale=1.5, user-scalable=no"/>
 <meta property="og:title" content="Oculae Machinum"/>
 <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3M_-1of9NDa25KBGJx4QSDHAYGK-2mFaAg2WTlqTOIG7AOlUi3PTuGIs&s=10"/>
@@ -13,16 +12,26 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </meta>
 	<head>
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
 <link rel="icon" type="image/x-icon" href=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3M_-1of9NDa25KBGJx4QSDHAYGK-2mFaAg2WTlqTOIG7AOlUi3PTuGIs&s=10">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
   </head>
 	<title>OM</title>
+</head>
 <body>
+  <script src="script.js"></script>
 
-	<h1>under construction rn </h1>
+<div id="container">
+  <div>
+<p><textarea style="resize: none; height: 1%;" id="input" onkeyup="update()" onchange="update()" autofocus=""></textarea></p>
+</div>
+<div>
+<p id="conversion"></p>
+<p onclick="copifier()"><textarea style="resize: none;" id="output" readonly="readonly"></textarea></p>
+</div>
+</div>
 </body>
 </html>
