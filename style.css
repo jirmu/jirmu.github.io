@@ -1,37 +1,94 @@
-body {
-  background: "https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fmy-attempt-at-recreating-the-flag-of-the-eusan-nation-v0-9cdwe5ybqh8b1.png%3Fwidth%3D640%26crop%3Dsmart%26auto%3Dwebp%26s%3Dcb60b35ecf56336f09fed57442332a5d7f813cdf"
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-color: gray;
+		body {
+			background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB0tppV--rxXxlv2GsnFw9mTxCGeKurtmoLUYUMt6QkEzDoKWeXrJl0zR&s=10');
+    background-color: rgba(0,0,0,0.85);
+    background-blend-mode: darken;
+			font-family: IBM Plex Mono;
+			text-align: center;
+			color: white;
+		}
+    #container {
+   width:100%;
+    overflow: hidden;
+   display: grid;
+  grid-template-columns: auto auto;
+  grid-row: 1;
+  
+}
+#one {
+   width:30%;
+  float:left;
+  width: 350px;
+  height: 1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 5em;
+  font-family: IBM Plex Mono;
   color: white;
-  font-family:"IBM Plex Mono";
-  font-size: 50px;
-  overflow: auto;
-  width: 100%;
-  height: 100%; 
+  background-color: black;
+  border: 8px solid white;
+  border-radius: 50px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB0tppV--rxXxlv2GsnFw9mTxCGeKurtmoLUYUMt6QkEzDoKWeXrJl0zR&s=10');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: darken;
+}
+#two {
+  width:30%;
+  float:right;
+  width: 350px;
+  height: 1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 5em;
+  font-family: IBM Plex Mono;
+  color: white;
+  background-color: black;
+  border: 8px solid white;
+  border-radius: 50px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB0tppV--rxXxlv2GsnFw9mTxCGeKurtmoLUYUMt6QkEzDoKWeXrJl0zR&s=10');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: darken;
   }
-.yark {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 200;
-  font-style: normal;
-}
-
-}
-h1 {
+@media only screen and (max-width: 767px) {
+    #one, #two
+    {
+        display: block; 
+        float: none; 
+        width: 100%;
+        padding: 20px 0;
+        width: 700px;
+  height: 1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 5em;
+  font-family: IBM Plex Mono;
   color: white;
-  text-align: center;
-}
-p {
-  color: white;
-}
+  background-color: black;
+  border: 8px solid white;
+  border-radius: 50px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB0tppV--rxXxlv2GsnFw9mTxCGeKurtmoLUYUMt6QkEzDoKWeXrJl0zR&s=10');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: darken;
+    }
+    #container {
+   width:100%;
+   display: grid;
+   grid-template-columns: auto;
+  grid-row: 2;
 
-.center {
-  border: none;
-  border-radius: 30px;
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
+  }
+}  
+  textarea {
+  width: 90%;
+  height: 1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 5em;
+  font-family: IBM Plex Mono;
+  color: white;
+  background-color: black;
+  border: 8px solid white;
+  border-radius: 50px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB0tppV--rxXxlv2GsnFw9mTxCGeKurtmoLUYUMt6QkEzDoKWeXrJl0zR&s=10');
+    background-color: rgba(0,0,0,0.8);
+    background-blend-mode: darken;
 }
