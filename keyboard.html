@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard Layout Heatmap</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  .keyboard {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .key-row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .key {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin: 2px;
+    cursor: pointer;
+  }
+
+  .key:hover {
+    background-color: #f0f0f0;
+  }
+</style>
+</head>
+<body>
+<div class="keyboard">
+  <div class="key-row">
+    <div class="key">Q</div>
+    <div class="key">W</div>
+    <div class="key">E</div>
+    <div class="key">R</div>
+    <div class="key">T</div>
+    <div class="key">Y</div>
+    <div class="key">U</div>
+    <div class="key">I</div>
+    <div class="key">O</div>
+    <div class="key">P</div>
+  </div>
+  <div class="key-row">
+    <div class="key">A</div>
+    <div class="key">S</div>
+    <div class="key">D</div>
+    <div class="key">F</div>
+    <div class="key">G</div>
+    <div class="key">H</div>
+    <div class="key">J</div>
+    <div class="key">K</div>
+    <div class="key">L</div>
+  </div>
+  <div class="key-row">
+    <div class="key">Z</div>
+    <div class="key">X</div>
+    <div class="key">C</div>
+    <div class="key">V</div>
+    <div class="key">B</div>
+    <div class="key">N</div>
+    <div class="key">M</div>
+  </div>
+</div>
+<script>
+  // Sample letter frequencies (can be customized or fetched dynamically)
+  const letterFrequencies = {
+    'Q': 2.5,
+    'W': 2.3,
+    'E': 13,
+    'R': 6.8,
+    'T': 9.1,
+    'Y': 4.3,
+    'U': 4.7,
+    'I': 8,
+    'O': 7.6,
+    'P': 3.5,
+    'A': 8.2,
+    'S': 8.8,
+    'D': 4.3,
+    'F': 3.2,
+    'G': 4.4,
+    'H': 4.6,
+    'J': 2.2,
+    'K': 2,
+    'L': 3.4,
+    'Z': 1.2,
+    'X': 1.7,
+    'C': 3.2,
+    'V': 2.8,
+    'B': 1.5,
+    'N': 6.7,
+    'M': 2.3
+  };
+
+  // Function to update key colors based on frequencies
+  function updateKeyColors() {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+      const letter = key.textContent.trim();
+      if (letterFrequencies.hasOwnProperty(letter)) {
+        const frequency = letterFrequencies[letter];
+        const maxFrequency = Math.max(...Object.values(letterFrequencies));
+        const intensity = Math.round((frequency / maxFrequency) * 255);
+        key.style.backgroundColor = `rgb(${255 - intensity}, ${255 - intensity}, 255)`;
+      }
+    });
+  }
+
+  // Initial update
+  updateKeyColors();
+
+  // Example: Swap letter positions (e.g., Q and W)
+  function swapLetters(letter1, letter2) {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+      if (key.textContent.trim() === letter1) {
+        key.textContent = letter2;
+      } else if (key.textContent.trim() === letter2) {
+        key.textContent = letter1;
+      }
+    });
+    updateKeyColors(); // Update colors after swapping
+  }
+
+  // Example usage
+  // swapLetters('Q', 'W');
+</script>
+</body>
+</html>
