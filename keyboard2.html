@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard Layout Heatmap</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  .keyboard {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .key-row1 {
+    display: flex;
+    justify-content: center;
+    margin-left:20px;
+  }
+  
+  .key-row2 {
+    display: flex;
+    justify-content: center;
+    margin-left:40px;
+  }
+  
+  .key-row3 {
+    display: flex;
+    justify-content: center;
+    margin-right:60px;
+  }
+
+  .key {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin: 2px;
+    cursor: pointer;
+  }
+
+  .key:hover {
+    background-color: #f0f0f0;
+  }
+</style>
+</head>
+<body>
+<div class="keyboard">
+  <div class="key-row1">
+    <div class="key">U</div>
+    <div class="key">E</div>
+    <div class="key">Ü</div>
+    <div class="key">M</div>
+    <div class="key">.</div>
+    <div class="key">Q</div>
+    <div class="key">P</div>
+    <div class="key">C</div>
+    <div class="key">T</div>
+    <div class="key">Y</div>
+    <div class="key">H</div>
+    <div class="key">J</div>
+  </div>
+  <div class="key-row2">
+    <div class="key">İ</div>
+    <div class="key">O</div>
+    <div class="key">A</div>
+    <div class="key">N</div>
+    <div class="key">V</div>
+    <div class="key">X</div>
+    <div class="key">S</div>
+    <div class="key">D</div>
+    <div class="key">L</div>
+    <div class="key">R</div>
+    <div class="key">K</div>
+    <div class="key">G</div>
+  </div>
+  <div class="key-row3">
+    <div class="key">Ö</div>
+    <div class="key">I</div>
+    <div class="key">,</div>
+    <div class="key">F</div>
+    <div class="key">B</div>
+    <div class="key">W</div>
+    <div class="key"><</div>
+    <div class="key">Ş</div>
+    <div class="key">Z</div>
+    <div class="key">Ç</div>
+    <div class="key">Ğ</div>
+  </div>
+</div>
+<script>
+  // Sample letter frequencies (can be customized or fetched dynamically)
+  const letterFrequencies = {
+  'A': 11.92,
+	'B': 2.844,
+	'C': 0.963,
+	'Ç': 1.156,
+	'D': 4.706,
+	'E': 8.912,
+	'F': 0.461,
+	'G': 1.253,
+	'Ğ': 1.125,
+	'H': 1.212,
+	'I': 5.114,
+	'İ': 8.6,
+	'J': 0.034,
+	'K': 4.683,
+	'L': 5.922,
+	'M': 3.752,
+	'N': 4.487,
+	'O': 2.476,
+	'Ö': 0.777,
+	'P': 0.886,
+	'R': 6.722,
+	'S': 3.014,
+	'Ş': 1.78,
+	'T': 3.014,
+	'U': 3.235,
+	'Ü': 1.854,
+	'V': 0.959,
+	'Y': 3.336,
+	'Z': 1.5
+  };
+
+  // Function to update key colors based on frequencies
+  function updateKeyColors() {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+      const letter = key.textContent.trim();
+      if (letterFrequencies.hasOwnProperty(letter)) {
+        const frequency = letterFrequencies[letter];
+        const maxFrequency = Math.max(...Object.values(letterFrequencies));
+        const intensity = Math.round((frequency / maxFrequency) * 255);
+        key.style.backgroundColor = `rgb(${255 - intensity}, ${255 - intensity}, 255)`;
+      }
+    });
+  }
+
+  // Initial update
+  updateKeyColors();
+
+  // Example: Swap letter positions (e.g., Q and W)
+  function swapLetters(letter1, letter2) {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+      if (key.textContent.trim() === letter1) {
+        key.textContent = letter2;
+      } else if (key.textContent.trim() === letter2) {
+        key.textContent = letter1;
+      }
+    });
+    updateKeyColors(); // Update colors after swapping
+  }
+
+  // Example usage
+  // swapLetters('Q', 'W');
+</script>
+</body>
+</html>
